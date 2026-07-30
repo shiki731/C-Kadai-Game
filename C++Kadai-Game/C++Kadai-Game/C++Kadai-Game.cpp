@@ -11,7 +11,6 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
     std::cout << "ゲーム開始" << std::endl;
 
     // new/deleteでインスタンス化、スマートポインタで管理
