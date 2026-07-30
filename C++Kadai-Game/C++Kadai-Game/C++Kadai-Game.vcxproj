@@ -126,6 +126,7 @@
     <ClCompile Include="C++Kadai-Game.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="CharaSelect.cpp" />
+    <ClCompile Include="HP.cpp" />
     <ClCompile Include="Magic.cpp" />
     <ClCompile Include="Salmon.cpp" />
     <ClCompile Include="Sword.cpp" />
@@ -133,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharaSelect.h" />
+    <ClInclude Include="HP.h" />
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Salmon.h" />
     <ClInclude Include="Sword.h" />
