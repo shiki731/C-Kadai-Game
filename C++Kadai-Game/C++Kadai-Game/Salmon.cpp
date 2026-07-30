@@ -1,5 +1,10 @@
 #include "Salmon.h"
 
-void Salmon::command(int select) {
+
+int Salmon::Battle(int select, int action) {
+
+}
+
+int Salmon::Defence(int select, int action) {
 
 }

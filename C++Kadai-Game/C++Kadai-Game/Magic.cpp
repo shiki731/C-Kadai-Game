@@ -1,5 +1,10 @@
 #include "Magic.h"
 
-void Magic::command(int select) {
+
+int Magic::Battle(int select, int action) {
+
+}
+
+int Magic::Defence(int select, int action) {
 
 }
