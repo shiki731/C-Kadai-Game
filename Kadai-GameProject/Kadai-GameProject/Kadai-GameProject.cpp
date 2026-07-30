@@ -3,10 +3,13 @@
 
 #include <iostream>
 #include "Character.h"
+#include "Sword.h"
+#include "Salmon.h"
+#include "Magic.h"
 
 int main()
 {
-    
+    aaa
     
 }
 

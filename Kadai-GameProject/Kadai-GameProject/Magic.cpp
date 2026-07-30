@@ -1,10 +1,8 @@
 #include "Magic.h"
+#include <iostream>
 
 void Magic::command(int select) {
-	if (select == 1) {
-
-	}
-	else if (select == 2) {
-
+	if (select == 2) {
+		std::cout << "–‚–@Žg‚¢‚ð‘I‘ð" << std::endl;
 	}
 }
