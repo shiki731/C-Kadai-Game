@@ -63,7 +63,8 @@ int main()
         printf("　\n");
 
         battle->Battle(charaSelect, actionSelect, EcharaSelect, EactionSelect);
-        
+        printf("　\n");
+
         if (HPptr->playerHP <= 0) {
             std::cout << "プレイヤーの負け" << std::endl;
             break;

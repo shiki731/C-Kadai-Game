@@ -2,6 +2,7 @@
 #include <iostream>
 
 void Check::Battle(int SelectP, int ActionP, int SelectE, int ActionE) {
+
     if (ActionP == 1) { // プレイヤーの攻撃
 
         if (SelectP == 1) { // プレイヤーは剣士
@@ -170,4 +171,6 @@ void Check::Battle(int SelectP, int ActionP, int SelectE, int ActionE) {
             }
         }
     }
+
+
 }
