@@ -1,6 +1,6 @@
 #include "Sword.h"
-#include "HP.h"
 
+/*
  int Sword::Battle(int select, int action) {
 
 	 if (action == 1) { // “G‚ªUŒ‚
@@ -54,3 +54,4 @@
 		 }
 	 }
  }
+ */

@@ -10,7 +10,7 @@
 #include "Magic.h"
 #include "Salmon.h"
 #include "CharaSelect.h"
-#include "HP.h"
+#include "Check.h"
 
 
 int main()
@@ -24,10 +24,10 @@ int main()
     Salmon* playerSalmon = new Salmon;
     CharaSelect* charaSelect = new CharaSelect;
 
-    std::unique_ptr<Sword> pSwordptr(playerSword);
-    std::unique_ptr<Magic> pMagicptr(playerMagic);
-    std::unique_ptr<Salmon> pSalmonptr(playerSalmon);
-    std::unique_ptr<CharaSelect> pCharaSelectptr(charaSelect);
+    std::shared_ptr<Sword> pSwordptr(playerSword);
+    std::shared_ptr<Magic> pMagicptr(playerMagic);
+    std::shared_ptr<Salmon> pSalmonptr(playerSalmon);
+    std::shared_ptr<CharaSelect> pCharaSelectptr(charaSelect);
 
     delete playerSword;
     delete playerMagic;
@@ -40,46 +40,38 @@ int main()
     pMagicptr->power = 30;
     pSalmonptr->power = 25;
 
-    std::shared_ptr<HP> pHP = std::make_shared<HP>();
+    std::unique_ptr<Check> battle = std::make_unique<Check>();
+    std::shared_ptr<Character> HPptr = std::make_shared<Character>();
 
-    pHP->PlayerHP = 300;
-    pHP->EnemyHP = 300;
+    HPptr->playerHP = 300;
+    HPptr->enemyHP = 300;
     
     while (true) {
+        std::cout << "現在のプレイヤーの戦力:" << HPptr->playerHP << std::endl;
+        std::cout << "現在の敵の戦力:" << HPptr->enemyHP << std::endl;
+
         int charaSelect = pCharaSelectptr->charaSelect();
         int actionSelect = pCharaSelectptr->actionSelect();
-        // printf("キャラは%d、技は%d\n", charaSelect, actionSelect);
 
         srand((unsigned int)time(NULL));
         int EcharaSelect = rand() % 3 + 1;
         int EactionSelect = rand() % 2 + 1;
-        // printf("キャラは%d、技は%d\n", EcharaSelect, EactionSelect);
 
-        if (actionSelect == 1) {
+        printf("　\n");
+        printf("キャラは%d、技は%d\n", charaSelect, actionSelect);
+        printf("敵のキャラは%d、技は%d\n", EcharaSelect, EactionSelect);
+        printf("　\n");
 
-            if (charaSelect == 1) {
-                pSwordptr->Battle(EcharaSelect,EactionSelect);
-            }
-            else if (charaSelect == 2) {
-                pMagicptr->Battle(EcharaSelect, EactionSelect);
-            }
-            else if (charaSelect == 3) {
-                pSalmonptr->Battle(EcharaSelect, EactionSelect);
-            }
-        }
-        else if (actionSelect == 2) {
-
-            if (charaSelect == 1) {
-                pSwordptr->Defence(EcharaSelect, EactionSelect);
-            }
-            else if (charaSelect == 2) {
-                pMagicptr->Defence(EcharaSelect, EactionSelect);
-            }
-            else if (charaSelect == 3) {
-                pSalmonptr->Defence(EcharaSelect, EactionSelect);
-            }
-        }
+        battle->Battle(charaSelect, actionSelect, EcharaSelect, EactionSelect);
         
+        if (HPptr->playerHP <= 0) {
+            std::cout << "プレイヤーの負け" << std::endl;
+            break;
+        }
+        else if (HPptr->enemyHP <= 0) {
+            std::cout << "プレイヤーの勝ち" << std::endl;
+            break;
+        }
 
     }
     
