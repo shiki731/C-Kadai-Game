@@ -1,5 +1,5 @@
 #pragma once
-
+#include "HP.h"
 class Character
 {
 public:
@@ -7,7 +7,7 @@ public:
 	virtual int Battle(int select,int action);
 	
 	virtual int Defence(int select, int action);
-private:
+protected:
 	int damage = 0;
 	int Edamage = 0;
 };

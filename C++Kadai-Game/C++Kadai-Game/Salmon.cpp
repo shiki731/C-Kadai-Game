@@ -1,5 +1,5 @@
 #include "Salmon.h"
-
+#include "HP.h"
 
 int Salmon::Battle(int select, int action) {
 

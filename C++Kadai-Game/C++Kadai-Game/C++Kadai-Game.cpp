@@ -40,7 +40,10 @@ int main()
     pMagicptr->power = 30;
     pSalmonptr->power = 25;
 
-    std::unique_ptr<HP> pHP = std::make_unique<HP>();
+    std::shared_ptr<HP> pHP = std::make_shared<HP>();
+
+    pHP->PlayerHP = 300;
+    pHP->EnemyHP = 300;
     
     while (true) {
         int charaSelect = pCharaSelectptr->charaSelect();

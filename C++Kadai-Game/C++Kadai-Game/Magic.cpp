@@ -1,5 +1,5 @@
 #include "Magic.h"
-
+#include "HP.h"
 
 int Magic::Battle(int select, int action) {
 

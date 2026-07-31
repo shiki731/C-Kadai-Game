@@ -1,6 +1,6 @@
 #pragma once
 #include "Character.h"
-
+#include "HP.h"
 class Magic:public Character
 {
 public:
