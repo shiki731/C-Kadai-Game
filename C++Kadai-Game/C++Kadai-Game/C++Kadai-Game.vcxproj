@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4811cf17-15e9-4f9d-8b4b-1a8562262f83}</ProjectGuid>
-    <RootNamespace>KadaiGameProject</RootNamespace>
+    <ProjectGuid>{8ad637b0-ee0c-4dad-927f-cf006ff840e9}</ProjectGuid>
+    <RootNamespace>CKadaiGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,14 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="C++Kadai-Game.cpp" />
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="Kadai-GameProject.cpp" />
+    <ClCompile Include="CharaSelect.cpp" />
+    <ClCompile Include="Check.cpp" />
     <ClCompile Include="Magic.cpp" />
     <ClCompile Include="Salmon.cpp" />
     <ClCompile Include="Sword.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="CharaSelect.h" />
+    <ClInclude Include="Check.h" />
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Salmon.h" />
     <ClInclude Include="Sword.h" />
