@@ -5,7 +5,7 @@ protected:
 	
 	virtual void command(int select);
 
-protected:
+private:
 	int pow = 0;
 };
 
