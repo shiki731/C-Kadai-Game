@@ -24,7 +24,7 @@ int main()
     Salmon* playerSalmon = new Salmon;
     CharaSelect* charaSelect = new CharaSelect;
 
-    std::shared_ptr<Sword> pSwordptr(playerSword);
+    std::shared_ptr<Sword> pSwordptr(playerSword); //<Character>型でいい
     std::shared_ptr<Magic> pMagicptr(playerMagic);
     std::shared_ptr<Salmon> pSalmonptr(playerSalmon);
     std::shared_ptr<CharaSelect> pCharaSelectptr(charaSelect);
